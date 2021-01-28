@@ -1,0 +1,115 @@
+.landing__button {
+    display: inline-block;
+    background: white;
+    color: rgb(110, 110, 110);
+    padding: 1.6rem;
+    margin-top: 1.6rem;
+    position: absolute;
+    left: 27%;
+    box-shadow: $shadow;
+    font-size: 2.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 200rem;
+    transition: all .2s ease;
+    @include respond(phone) {
+        left: 16;
+    }
+    &:hover {
+        text-decoration: none;
+        box-shadow: $shadow-hover;
+        color: $primary-color;
+        transform: translateY(-10px);
+    }
+    &:active {
+        transform: translateY(0px);
+        border: none;
+    }
+}
+
+.about__btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: transparent;
+    color: $primary-color;
+    font-size: 1.5rem;
+    border-bottom: 1px solid $primary-color;
+    font-weight: 600;
+    padding: 1rem;
+    transition: all .3s ease;
+    &:hover {
+        text-transform: none;
+        text-decoration: none;
+        box-shadow: $shadow-hover;
+        background-color: $primary-color;
+        color: #fff;
+    }
+}
+
+.bookingButton {
+    background-color: white;
+    color: #3d3d3d;
+    text-transform: uppercase;
+    padding: 1rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10rem;
+    font-size: 1.4rem;
+    transition: all .2s ease;
+    &:hover {
+        text-decoration: none;
+        text-shadow: $shadow;
+        box-shadow: $shadow;
+        color: rgb(212, 109, 41);
+        // transform: scale(1.1);
+    }
+}
+
+.buttonBookingTwo {
+    text-transform: uppercase;
+    padding: 2rem;
+    color: white;
+    font-size: 1.4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    box-shadow: $shadow;
+    background: radial-gradient(circle, #28B485, #2998FF);
+    font-weight: 500;
+    transition: all .2s ease;
+    &:hover {
+        text-decoration: none;
+        background: transparent;
+        font-weight: 600;
+        color: linear-gradient(to right, #28B485, #2998FF);
+        text-shadow: $shadow;
+        box-shadow: none;
+        transform: translatey(-10px);
+    }
+    &:active {
+        transform: translatey(0px);
+    }
+}
+
+.stories__button {
+    color: white;
+    background-color: $primary-color;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    box-shadow: $shadow;
+    border-radius: 10rem;
+    display: inline-block;
+    transition: all .2s ease;
+    &:hover {
+        text-decoration: none;
+        transform: translateY(-10px);
+        background-color: transparent;
+        box-shadow: none;
+        color: black;
+        text-shadow: $shadow-hover;
+    }
+    &:active {
+        transform: translatey(0px);
+    }
+}

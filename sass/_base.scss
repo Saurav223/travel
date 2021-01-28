@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+html {
+    font-size: 62.5%;
+    @include respond(tab-land) {
+        font-size: 50%;
+    }
+    @include respond(tab-port) {
+        font-size: 40%;
+    }
+    @include respond(phone) {
+        font-size: 35%;
+    }
+    @include respond(mini-phone) {
+        font-size: 30%;
+    }
+    @include respond(desktop) {
+        font-size: 80%;
+    }
+}
+
+.body {
+    font-family: 'Baloo Bhai 2', cursive;
+    padding: 0rem;
+    @include respond(phone) {
+        padding: 0rem;
+    }
+    box-sizing: border-box;
+}

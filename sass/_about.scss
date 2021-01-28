@@ -1,0 +1,101 @@
+    .about {
+        background-color: #f7f7f7;
+        margin-top: -25rem;
+        padding: 30rem 10rem 7rem 10rem;
+        @include respond(tab-port) {
+            padding: 30rem 5rem 30rem 5rem;
+        }
+        @include respond(phone) {
+            margin-top: -27rem;
+            padding: 30rem 2rem 30rem 2rem;
+        }
+        @include respond(mini-phone) {
+            padding: 30rem 2rem 30rem 2rem;
+        }
+        &__heading {
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: .5rem;
+            font-weight: 600;
+            color: transparent;
+            background-image: $background-text;
+            -webkit-background-clip: text;
+            background-clip: text;
+            transition: all .2s ease;
+            @include respond(phone) {
+                letter-spacing: 0rem;
+                font-size: 2rem;
+            }
+            &:hover {
+                transform: skewY(2deg) skewX(15deg) scale(1.1);
+                text-shadow: $shadow;
+            }
+        }
+        &__section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            @include respond(phone) {
+                grid-template-columns: auto;
+            }
+            &--1 {
+                color: #777;
+            }
+            &--2 {
+                margin-top: 5rem;
+                margin-left: 0rem;
+                position: relative;
+            }
+        }
+    }
+    
+    .img {
+        cursor: pointer;
+        &>* {
+            height: 15rem;
+            width: 25rem;
+            position: absolute;
+            display: inline-block;
+            outline-offset: 8px;
+            transition: all .2s ease;
+            @include respond(phone) {
+                height: 20rem;
+                width: 30rem;
+                outline-offset: 6px;
+            }
+            &:hover {
+                outline: 10px solid #55c57a;
+                transform: scale(1.2) translateY(-0.5rem);
+                box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+                z-index: 50;
+            }
+        }
+        &-1 {
+            top: 0;
+            left: 5rem;
+            z-index: 10;
+            @include respond(phone) {
+                top: 0;
+                left: 5rem;
+            }
+        }
+        &-2 {
+            top: 10rem;
+            left: 11rem;
+            z-index: 20;
+            @include respond(phone) {
+                top: 0;
+                left: 10rem;
+            }
+        }
+        &-3 {
+            top: 4rem;
+            left: 20rem;
+            z-index: 30;
+            @include respond(phone) {
+                top: 0;
+                left: 15rem;
+            }
+        }
+    }

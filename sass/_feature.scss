@@ -1,0 +1,58 @@
+.feature {
+    background-image: linear-gradient(to right bottom, rgba($primary-color, 0.8), rgba($secondary-color, 0.8)), url("img/horse.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: skewY(-7deg);
+    padding: 10rem 7rem;
+    margin-top: -7rem;
+    color: rgb(87, 87, 87);
+    @include respond(tab-port) {
+        margin-top: -20rem;
+    }
+    @include respond(phone) {
+        margin-top: -3rem;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        transform: skewY(7deg);
+        grid-gap: 3rem;
+        @include respond(phone) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &>* {
+            background-color: $color-grey-light;
+            overflow: hidden;
+            padding: 3rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+            box-shadow: $shadow;
+            transition: all .2s ease;
+            &:hover {
+                transform: translatey(-20px);
+                box-shadow: $shadow-hover;
+            }
+        }
+    }
+}
+
+.img {
+    height: 5rem;
+    display: inline;
+    &__heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 2rem 0rem 2rem 0rem;
+        text-transform: uppercase;
+        color: rgb(61, 61, 61);
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 1.3rem;
+        text-transform: capitalize;
+        margin: 0rem 1rem;
+    }
+    &--1 {}
+}

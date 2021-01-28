@@ -1,0 +1,49 @@
+.form {
+    // height: 60rem;
+    background: radial-gradient(circle, #6AF15D, #008AFF);
+    padding: 10rem;
+    &__section {
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(105deg, rgba($color-white, .9) 50%, transparent 50%), url(img/waterfall.jpg);
+        background-size: cover;
+        border-radius: 3px;
+        box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, .60);
+    }
+    &__fillup {
+        width: 50%;
+        padding: 3rem 2.5rem;
+    }
+    &>* {
+        font-size: 1.7rem;
+    }
+    &__heading {
+        margin-bottom: 5rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        background-image: linear-gradient(to right, #7ed56f, #28b485);
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: .2rem;
+        transition: all .2s ease;
+        cursor: pointer;
+        &:hover {
+            transform: translateX(20px) scale(1.1);
+            text-shadow: $shadow-hover;
+        }
+    }
+}
+
+.btn-primary {
+    background-color: $secondary-color;
+    border: none;
+    margin-top: 2rem;
+    font-size: 2rem;
+    border-radius: 5px;
+    &:hover {
+        background-color: $color-primary;
+        box-shadow: $shadow-hover;
+    }
+}
